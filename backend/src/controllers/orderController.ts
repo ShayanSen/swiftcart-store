@@ -179,7 +179,16 @@ export async function createStreamChannel(req: Request, res: Response, next: Nex
       created_by_id: streamChatUserId,
     });
 
+    //await channel.create();
+
+    // check if channel already exists
+    const existing = await server.queryChannels({
+    id: channelId,
+    });
+
+    if (existing.length === 0) {
     await channel.create();
+    }
 
     await channel.addMembers([streamChatUserId]);
 
@@ -247,7 +256,16 @@ export async function createVideoInvite(req: Request, res: Response, next: NextF
       created_by_id: customerSid,
     });
 
+    //await channel.create();
+
+    const existing = await server.queryChannels({
+    id: channelId,
+   });
+
+    if (existing.length === 0) {
     await channel.create();
+    }
+
     await channel.addMembers([customerSid, staffStreamUserId]);
 
     const joinUrl = `${env.FRONTEND_URL.replace(/\/+$/, "")}/orders/${order.id}/call`;
