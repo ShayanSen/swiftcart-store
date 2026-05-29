@@ -11,9 +11,15 @@ export function HomeHero({ categories, loadingCategories }) {
 
       <div className="relative grid gap-8 p-8 md:grid-cols-2 md:items-center md:p-12 lg:p-14">
         <div className="text-left">
-          <h1 className="text-3xl font-bold tracking-tight text-base-content md:text-4xl lg:text-5xl">
+          {/* <h1 className="text-3xl font-bold tracking-tight text-base-content md:text-4xl lg:text-5xl">
             Hardware &amp; workspace, <span className="text-primary">ready to ship</span>
+          </h1>  */}
+
+          <h1 className="text-3xl font-bold tracking-tight text-base-content md:text-4xl lg:text-5xl">
+            Swift shopping, <span className="text-primary">for every lifestyle</span>
           </h1>
+
+
 
           <p className="mt-4 max-w-lg text-base leading-relaxed text-base-content/70">
             Audio, wearables, workspace, and travel—curated for work and home. Secure checkout;
