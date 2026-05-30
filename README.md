@@ -8,6 +8,10 @@ A full-stack PERN e-commerce application along with customer support feature, bu
 
 > For the best experience, please open the application in a desktop browser.
 
+### Demo Video
+
+🔗 https://youtu.be/CrmuIbUKvgQ?si=Itv91UYPswzpT5Xy
+
 ---
 
 ## Project Overview
